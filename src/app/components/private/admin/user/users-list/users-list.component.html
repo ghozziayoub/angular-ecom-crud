@@ -1,0 +1,11 @@
+<p>users-list works!</p>
+
+<div class="container">
+    <div class="row">
+        <app-user-details 
+        *ngFor="let user of users" 
+        [userDetails]="user" 
+        class="card col-4" style="width: 18rem;">
+        </app-user-details>
+    </div>
+</div>
