@@ -38,13 +38,36 @@
         </a>
     </li>
 
+    <!-- Nav Item - Gestion des client -->
+    <li *ngIf="isAdmin" class="nav-item active">
+        <a class="nav-link" routerLink="/admin/user/list">
+            <i class="fas fa-fw fa-stream"></i>
+            <span>Gestion des clients</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Gestion des commandes -->
+    <li *ngIf="isAdmin" class="nav-item active">
+        <a class="nav-link">
+            <i class="fas fa-fw fa-stream"></i>
+            <span>Gestion des commandes</span>
+        </a>
+    </li>
 
     <!-- CLIENT ITEMS -->
     <!-- Nav Item - Mes commandes -->
     <li *ngIf="isClient" class="nav-item active">
-        <a class="nav-link" routerLink="/client/order/list">
+        <a class="nav-link">
             <i class="fas fa-fw fa-stream"></i>
             <span>Mes commandes</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Mon profile -->
+    <li *ngIf="isClient" class="nav-item active">
+        <a class="nav-link">
+            <i class="fas fa-fw fa-stream"></i>
+            <span>Mon profile</span>
         </a>
     </li>
 

@@ -28,6 +28,8 @@ import { MyOrdersComponent } from './components/private/client/my-orders/my-orde
 import { ProductsListComponent } from './components/private/admin/product/products-list/products-list.component';
 import { ProductAddComponent } from './components/private/admin/product/product-add/product-add.component';
 import { ProductUpdateComponent } from './components/private/admin/product/product-update/product-update.component';
+import { OrdersListComponent } from './components/private/admin/orders/orders-list/orders-list.component';
+import { MyProfileComponent } from './components/private/client/my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ProductUpdateComponent } from './components/private/admin/product/produ
     MyOrdersComponent,
     ProductsListComponent,
     ProductAddComponent,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    OrdersListComponent,
+    MyProfileComponent,
   ],
   imports: [
     BrowserModule,

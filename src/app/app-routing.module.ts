@@ -17,6 +17,7 @@ import { NotAuthGuard } from './guards/not-auth.guard';
 import { ProductAddComponent } from './components/private/admin/product/product-add/product-add.component';
 import { ProductsListComponent } from './components/private/admin/product/products-list/products-list.component';
 import { ProductUpdateComponent } from './components/private/admin/product/product-update/product-update.component';
+import { UserDetailsComponent } from './components/private/admin/user/user-details/user-details.component';
 
 const routes: Routes = [
   {
@@ -74,6 +75,19 @@ const routes: Routes = [
             path: "update/:id",
             component: ProductUpdateComponent
           },
+        ]
+      },
+      {
+        path: "user",
+        children: [
+          {
+            path: "list",
+            component: UsersListComponent
+          },
+          {
+            path: "details/:di",
+            component: UserDetailsComponent
+          }
         ]
       }
     ],
