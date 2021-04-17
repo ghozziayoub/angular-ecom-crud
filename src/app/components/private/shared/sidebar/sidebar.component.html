@@ -30,6 +30,13 @@
             <span>Gestion des catégories</span>
         </a>
     </li>
+    <!-- Nav Item - Gestion des produis -->
+    <li *ngIf="isAdmin" class="nav-item active">
+        <a class="nav-link" routerLink="/admin/product/list">
+            <i class="fas fa-fw fa-stream"></i>
+            <span>Gestion des produits</span>
+        </a>
+    </li>
 
 
     <!-- CLIENT ITEMS -->

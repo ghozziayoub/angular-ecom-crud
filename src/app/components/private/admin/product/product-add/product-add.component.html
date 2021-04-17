@@ -1,0 +1,115 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <app-topbar></app-topbar>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Gestion des catégories</h1>
+                </div>
+
+                <!-- Content Row -->
+                <div class="row">
+
+                    <!-- Area Chart -->
+                    <div class="col">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Ajouter produit</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <form [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="nom">Nom</label>
+                                            <input type="text" name="nom" id="nom" formControlName="nom"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="description">Description</label>
+                                            <input type="text" name="description" id="description"
+                                                formControlName="description" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="prix">Prix</label>
+                                            <input type="text" name="prix" id="prix" formControlName="prix"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="image">Image URL</label>
+                                            <input type="text" name="image" id="image" formControlName="image"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="categorieId">Categorie</label>
+                                            <select formControlName="categorieId" id="categorieId" class="form-control">
+                                                <option *ngFor="let category of categories" [value]="category.id">
+                                                    {{category.libele}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <button [disabled]="addProductForm.invalid"
+                                                class="btn btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Your Website 2021</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->

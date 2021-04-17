@@ -38,7 +38,7 @@ export class AuthService {
 
       const decodedToken = helper.decodeToken(token);
 
-      if (decodedToken.roles == "admin") {
+      if (decodedToken.roles == "ADMIN") {
         return true
       } else {
         return false

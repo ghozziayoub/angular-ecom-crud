@@ -25,6 +25,9 @@ import { UserDetailsComponent } from './components/private/admin/user/user-detai
 import { CategoryAddComponent } from './components/private/admin/category/category-add/category-add.component';
 import { CategoryUpdateComponent } from './components/private/admin/category/category-update/category-update.component';
 import { MyOrdersComponent } from './components/private/client/my-orders/my-orders.component';
+import { ProductsListComponent } from './components/private/admin/product/products-list/products-list.component';
+import { ProductAddComponent } from './components/private/admin/product/product-add/product-add.component';
+import { ProductUpdateComponent } from './components/private/admin/product/product-update/product-update.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { MyOrdersComponent } from './components/private/client/my-orders/my-orde
     UserDetailsComponent,
     CategoryAddComponent,
     CategoryUpdateComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    ProductsListComponent,
+    ProductAddComponent,
+    ProductUpdateComponent
   ],
   imports: [
     BrowserModule,

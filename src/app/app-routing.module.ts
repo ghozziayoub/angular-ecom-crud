@@ -14,6 +14,9 @@ import { RegisterComponent } from './components/public/register/register.compone
 import { AdminGuard } from './guards/admin.guard';
 import { AuthGuard } from './guards/auth.guard';
 import { NotAuthGuard } from './guards/not-auth.guard';
+import { ProductAddComponent } from './components/private/admin/product/product-add/product-add.component';
+import { ProductsListComponent } from './components/private/admin/product/products-list/products-list.component';
+import { ProductUpdateComponent } from './components/private/admin/product/product-update/product-update.component';
 
 const routes: Routes = [
   {
@@ -53,6 +56,23 @@ const routes: Routes = [
           {
             path: "update/:id",
             component: CategoryUpdateComponent
+          },
+        ]
+      },
+      {
+        path: "product",
+        children: [
+          {
+            path: "list",
+            component: ProductsListComponent
+          },
+          {
+            path: "add",
+            component: ProductAddComponent
+          },
+          {
+            path: "update/:id",
+            component: ProductUpdateComponent
           },
         ]
       }

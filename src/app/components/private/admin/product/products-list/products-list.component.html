@@ -1,0 +1,100 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <app-topbar></app-topbar>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Gestion des produits</h1>
+                </div>
+
+                <!-- Content Row -->
+                <div class="row my-3">
+                    <div class="col">
+                        <button routerLink="/admin/product/add" class="btn btn-sm btn-primary">Ajouter</button>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <!-- Area Chart -->
+                    <div class="col">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Liste des produits</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Image</th>
+                                            <th>Nom</th>
+                                            <th>Prix</th>
+                                            <th>Categorie</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let product of products;let i = index">
+                                            <td class="w-10"><img [src]="product.image" class="img-fluid"></td>
+                                            <td>{{product.nom}}</td>
+                                            <td>{{product.prix}}</td>
+                                            <td>{{product.categorie.libele}}</td>
+                                            <td>
+                                                <button [routerLink]="['/admin/product/update',product.id]"
+                                                    class="btn btn-sm btn-warning mr-3">
+                                                    <i class="fa fa-edit"></i>
+                                                </button>
+                                                <button (click)="deleteProduct(product, i)"
+                                                    class="btn btn-sm btn-danger">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Your Website 2021</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
